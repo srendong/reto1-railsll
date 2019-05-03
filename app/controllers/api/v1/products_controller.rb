@@ -1,12 +1,12 @@
-class Api::V1::ProductsController < ApplicationController::Api
+class Api::V1::ProductsController < ApplicationController
   def index
       @products = Product.all
       render json: @products
 
-      respond_to do |format|
-
-            format.json { render :index, status: :ok, location: @products }
-
-      end
+      # respond_to do |format|
+      #
+      #       # format.json { render :index, status: :ok, location: @products }
+      #
+      # end
   end
 end
